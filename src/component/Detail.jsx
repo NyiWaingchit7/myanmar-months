@@ -7,7 +7,7 @@ const Detail = () => {
   const cardDetail = monthData.find((d) => d.Id === id);
   return (
     <div className="">
-      <div className="relative min-h-[100vh] flex flex-col justify-center items-center text-2xl additional-scroll ">
+      <div className="relative min-h-[100vh] flex flex-col justify-center items-center text-2xl snap-center ">
         <div className="">
           <p className="text-[#ffffff]">{cardDetail.MonthMm}</p>
           <div className=" absolute bottom-5 w-[100px] flex justify-center">
