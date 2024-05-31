@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { HiMenuAlt2 } from "react-icons/hi";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 const Card = ({ data }) => {
   const [hoverEffect, setHoverEffect] = useState(false);
@@ -19,16 +21,16 @@ const Card = ({ data }) => {
               alt="pic"
             />
 
-            <div className=" absolute top-0  w-[100%] h-[250px]  flex justify-center items-center">
-              <p className="text-[#FFFFFF]   font-bold text-center">
-                {data.MonthMm}
-              </p>
+            <div className=" absolute top-0  w-[100%] h-[250px]  flex flex-col  justify-center items-center gap-2">
+              <p className="text-[#FFFFFF] text-center">{data.MonthMm}</p>
+              <HiMenuAlt2 className="text-[#ffffff] text-3xl" />
             </div>
           </div>
         )}
         {hoverEffect && (
-          <div className="  w-[100%] h-[250px] bg-[#ffffff] flex justify-center items-center ">
-            <p className="font-bold text-center">{data.MonthMm}</p>
+          <div className="  w-[100%] h-[250px] bg-[#ffffff] flex flex-col  justify-center items-center gap-2 ">
+            <p className="text-center">{data.MonthMm}</p>
+            <HiOutlineExternalLink className="text-3xl" />
           </div>
         )}
       </div>

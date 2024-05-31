@@ -7,9 +7,12 @@ const Detail = () => {
   const cardDetail = monthData.find((d) => d.Id === id);
   return (
     <div className="">
-      <div className=" min-h-[100vh] flex justify-center items-center text-2xl additional-scroll ">
-        <div>
+      <div className="relative min-h-[100vh] flex flex-col justify-center items-center text-2xl additional-scroll ">
+        <div className="">
           <p className="text-[#ffffff]">{cardDetail.MonthMm}</p>
+          <div className=" absolute bottom-5 w-[100px] flex justify-center">
+            <img src="../scroll.png" className="w-[50px] " alt="img" />
+          </div>
         </div>
       </div>
       <DetailTextPart cardDetail={cardDetail} />
