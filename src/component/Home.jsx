@@ -20,14 +20,19 @@ const Home = () => {
     }
   }, []);
   return (
-    <div
-      ref={elementRef}
-      className=" max-w-[1000px] mx-auto overflow-auto scroll-smooth scrollbar-none "
-    >
-      <div className="h-[100vh] flex items-center gap-5 ">
-        {monthData.map((d) => (
-          <Card data={d} />
-        ))}
+    <div className=" max-w-[1000px] h-[100vh] flex flex-col justify-center mx-2 sm:mx-auto">
+      <div className="flex justify-end mb-2">
+        <p className="bg-[#ffffff] text-[#030303] p-2">မြန်မာလအသေးစိတ်များ</p>
+      </div>
+      <div
+        ref={elementRef}
+        className="  overflow-auto scroll-smooth scrollbar-none "
+      >
+        <div className=" flex items-center gap-5 ">
+          {monthData.map((d) => (
+            <Card data={d} />
+          ))}
+        </div>
       </div>
     </div>
   );

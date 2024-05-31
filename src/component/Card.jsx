@@ -10,30 +10,27 @@ const Card = ({ data }) => {
       onMouseOver={() => setHoverEffect(true)}
       onMouseLeave={() => setHoverEffect(false)}
     >
-      <div className=" border-4 border-[#FFFFFF]  relative ">
-        <img
-          src={`img/${data.Id}.jpg`}
-          className={`${
-            hoverEffect ? "hidden" : "w-[225px] h-[250px] object-cover "
-          }`}
-          alt="pic"
-        />
+      <div className="w-[140px] md:w-[230px] text-md sm:text-2xl  border-4 border-[#FFFFFF]  relative ">
         {!hoverEffect && (
-          <div className=" absolute top-0 w-[225px] h-[250px]  flex justify-center items-center">
-            <p className="text-[#FFFFFF]  text-[1.5rem] font-bold text-center">
-              {data.MonthMm}
-            </p>
+          <div>
+            <img
+              src={`img/${data.Id}.jpg`}
+              className=" w-[100%] h-[250px] object-cover "
+              alt="pic"
+            />
+
+            <div className=" absolute top-0  w-[100%] h-[250px]  flex justify-center items-center">
+              <p className="text-[#FFFFFF]   font-bold text-center">
+                {data.MonthMm}
+              </p>
+            </div>
           </div>
         )}
-        <div
-          className={`${
-            hoverEffect
-              ? "w-[225px] h-[250px] bg-[#ffffff] flex justify-center items-center "
-              : "hidden"
-          }`}
-        >
-          <p className="text-[1.5rem] font-bold text-center"> {data.MonthMm}</p>
-        </div>
+        {hoverEffect && (
+          <div className="  w-[100%] h-[250px] bg-[#ffffff] flex justify-center items-center ">
+            <p className="font-bold text-center">{data.MonthMm}</p>
+          </div>
+        )}
       </div>
     </Link>
   );
